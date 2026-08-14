@@ -1,0 +1,113 @@
+{
+    "manufacturer": "SABB Tecnologia",
+    "keyboard_name": "sabb_macropad",
+    "maintainer": "Adriano Oliveira",
+    "url": "https://sabb.tec.br",
+    "bootloader_instructions": "Hold the BOOTSEL button on the Pico, or hold the bottom-right key while plugging in the USB",
+    "tags": ["macropad", "rp2040", "encoder", "oled", "via"],
+
+    "processor": "RP2040",
+    "bootloader": "rp2040",
+
+    "usb": {
+        "vid": "0x5341",
+        "pid": "0x4242",
+        "device_version": "1.0.0"
+    },
+
+"debounce": 20,
+
+    "features": {
+        "bootmagic": true,
+        "extrakey": true,
+        "encoder": true,
+        "oled": true,
+        "mousekey": true
+    },
+
+    "bootmagic": {
+        "matrix": [2, 3]
+    },
+
+    "encoder": {
+        "rotary": [
+            {
+                "pin_a": "GP2",
+                "pin_b": "GP3",
+                "resolution": 4
+            },
+            {
+                "pin_a": "GP5",
+                "pin_b": "GP6",
+                "resolution": 4
+            }
+        ]
+    },
+
+    "matrix_pins": {
+        "direct": [
+            ["GP4", "GP7", null, null],
+            ["GP8", "GP9", "GP10", "GP11"],
+            ["GP12", "GP13", "GP14", "GP15"]
+        ]
+    },
+
+    "layouts": {
+        "LAYOUT": {
+            "layout": [
+                {
+                    "matrix": [0, 0],
+                    "x": 0,
+                    "y": 0
+                },
+                {
+                    "matrix": [0, 1],
+                    "x": 1,
+                    "y": 0
+                },
+
+                {
+                    "matrix": [1, 0],
+                    "x": 0,
+                    "y": 1
+                },
+                {
+                    "matrix": [1, 1],
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "matrix": [1, 2],
+                    "x": 2,
+                    "y": 1
+                },
+                {
+                    "matrix": [1, 3],
+                    "x": 3,
+                    "y": 1
+                },
+
+                {
+                    "matrix": [2, 0],
+                    "x": 0,
+                    "y": 2
+                },
+                {
+                    "matrix": [2, 1],
+                    "x": 1,
+                    "y": 2
+                },
+                {
+                    "matrix": [2, 2],
+                    "x": 2,
+                    "y": 2
+                },
+                {
+                    "matrix": [2, 3],
+                    "x": 3,
+                    "y": 2
+                }
+            ]
+        }
+    }
+}
